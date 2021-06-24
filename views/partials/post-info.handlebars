@@ -1,11 +1,22 @@
 <article class="post">
   <div class="title">
-    <a href="{{post_url}}" target="_blank">{{title}}</a>
-    <span>({{format_url post_url}})</span>
+    <span>>{{title}}</Span>
+  </div>
+  <div class="trade-img">
+    <script type="text/x-handlebars-template">
+    <img class="tradePic" src="{{imgURL}}">
+    </script>
+  </div>
+  <div class = "description">
+    {{description}}
+  </div>
+  <div class = "quality">
+    {{quality}}
+  </div>
+  <div class="console-post">
+    {{console}}
   </div>
   <div class="meta">
-    {{vote_count}} {{format_plural "point" vote_count}} by {{user.username}} on {{format_date created_at}}
-    |
-    <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
+    <a href="/offer/{{id}}">{{offer.length}} {{format_plural "Offer" offer.length}}</a>
   </div>
 </article>

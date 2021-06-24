@@ -1,5 +1,5 @@
 <section>
-  <h2>Create New Post</h2>
+  <h2>Create New Trade</h2>
 
   <form class="new-post-form">
     <div>
@@ -7,16 +7,39 @@
       <input type="text" id="post-title" name="post-title" />
     </div>
     <div>
-      <label for="post-url">Link</label>
-      <input id="post-url" name="post-url" />
+      <label for="post-description">Description</label>
+      <input type="text" id="description-box" name="post-description" />
     </div>
+    <div>
+      <span>Quality:   </span>
+    <span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+    </div>
+    <div>
+      <form name="Console" id="console" action="/action_page.php">
+  Consoles: <select name="Consoles" id="Consoles">
+    <option value="" selected="selected">Xbox</option>
+     <option value="" selected="selected">Playstaytion</option>
+      <option value="" selected="selected">Nintendo Switch</option>
+       <option value="" selected="selected">Retro</option>
+  </select>
+    </div>
+    <p>Upload Image</p>
+     <form action="/action_page.php">
+  <input type="file" id="myFile" name="filename">
+  <input id="img-submit" type="submit">
+</form>
     <button type="submit" class="btn">Create</button>
   </form>
+ 
 </section>
 
 {{#if posts.length}}
 <section>
-  <h2>Your Posts</h2>
+  <h2>Your Trades</h2>
   <ol>
     {{#each posts as |post|}}
     <li>
